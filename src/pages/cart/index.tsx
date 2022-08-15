@@ -12,7 +12,7 @@ const Cart = () => {
         cart?.createList();
     };
 
-    if (cart?.loading) return;
+    if (cart?.loading) return <></>;
 
     return cart?.cartData?.itemsQuantity === 0 ? (
         <Styles.Empty>

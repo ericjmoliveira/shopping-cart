@@ -44,7 +44,7 @@ const Orders = () => {
         cart?.deleteList(id);
     };
 
-    if (cart?.loading) return;
+    if (cart?.loading) return <></>;
 
     return (
         <Styles.Container>
