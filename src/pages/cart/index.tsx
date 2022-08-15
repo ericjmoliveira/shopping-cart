@@ -8,6 +8,12 @@ import emptyCart from '../../images/empty-cart.svg';
 const Cart = () => {
     const cart = useCart();
 
+    const handleListAddition = () => {
+        cart?.createList();
+    };
+
+    if (cart?.loading) return;
+
     return cart?.cartData?.itemsQuantity === 0 ? (
         <Styles.Empty>
             <h2>Cart (0 items)</h2>
@@ -29,6 +35,7 @@ const Cart = () => {
                 </div>
                 <Styles.Confirm>
                     <h2>Total: ${cart?.cartData?.total.toFixed(2)}</h2>
+                    <button onClick={handleListAddition}>Add to my lists</button>
                 </Styles.Confirm>
             </Styles.Info>
             <div>

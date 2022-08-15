@@ -48,7 +48,13 @@ const Header = () => {
                     </form>
                 </Styles.SearchBar>
                 <Styles.Navbar>
-                    <Styles.Cart>
+                    <Styles.Lists>
+                        <Link to="/lists">
+                            <Icons.BsReceiptCutoff></Icons.BsReceiptCutoff>
+                            <p>My Lists</p>
+                        </Link>
+                    </Styles.Lists>
+                    <Styles.Cart style={cart?.loading ? { visibility: 'hidden' } : {}}>
                         <Link to="/cart">
                             <div>
                                 <div>{cart?.cartData?.itemsQuantity}</div>

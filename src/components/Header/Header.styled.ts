@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { primaryColor, secondaryColor } from '../../GlobalStyle';
+import { primaryColor, secondaryColor } from "../../GlobalStyle";
 
 export const Container = styled.header`
     width: 100%;
@@ -143,6 +143,22 @@ export const Navbar = styled.nav`
 
     @media (max-width: 480px) {
         gap: 0;
+    }
+`;
+
+export const Lists = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+
+    &:hover {
+        background: ${secondaryColor};
     }
 `;
 
